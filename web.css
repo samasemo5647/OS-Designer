@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Borel&family=Changa:wght@200..800&family=Chewy&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Borel&family=Changa:wght@200..800&family=Chewy&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Kufi+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+
+    font-family: "Ubuntu", serif;
+    font-family: "Noto Kufi Arabic", serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+background:linear-gradient(#ffffff,#cecece) ;    
+height: 100vh;
+width: 100%;
+display: flex;
+    justify-content: center;
+    align-items:center;
+}
+body::after{
+    content:"" ;
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(25% at right 70%);
+}
+.on{
+    width: 80%;
+    height: 80%;
+    border-radius: 70px;
+    background: rgba(255,255,255 ,0.8);
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav ul li{
+    
+    display: inline-block;
+margin: 0 6px;
+
+}
+nav ul li a{
+    color: #3a3a3a;
+    border: 100pxpx;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.4s;
+}
+
+nav ul li a:hover{
+    color: #ff0000;
+}
+.in{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    width: 80%;
+    margin: auto;
+}
+.in button {
+    background-color: #00ff80;
+    font-size: 17px;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s;
+}
+.in button:hover{
+background-color: transparent;
+border-color: #00ff80;
+}
+
+.in .text{
+    color: #3a3a3a;
+    width: 100%;
+}
+.in .text h2{
+    font-size:500;
+    font-weight: 700;
+    align-items: center;
+}
+.in .text p{
+    font-size: 18px;
+    margin: 10px 0;
+    
+}
+.in .imeg{
+    width: 30%;
+}
+.in .imeg img{
+    width: 300px;
+}
+@media (min-width:950px) and (max-width:1000px){
+.in .imeg img{
+    width: 330px;
+    
+}
+}
+
+@media (max-width:950px){
+    .in{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .in .imeg img,in .text{
+        width:100%;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    body::after{
+        clip-path: circle(33% at bottom);
+    }
+}
